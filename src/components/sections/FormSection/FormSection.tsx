@@ -21,7 +21,9 @@ const formSchema = z.object({
     .regex(/^\(\d{2}\) \d{4,5}-\d{4}$/, 'Formato: (11) 99999-9999'),
   documento: z.string()
     .regex(/^(\d{11}|\d{14})$/, 'CPF ou CNPJ inválido'),
-  segmento: z.enum(['bebidas', 'alimentos', 'cosmeticos', 'limpeza', 'outros']),
+  segmento: z.string()
+    .min(1, 'Selecione um segmento')
+    .refine(val => ['bebidas', 'alimentos', 'cosmeticos', 'limpeza', 'outros'].includes(val), 'Segmento inválido'),
   aceiteTermos: z.boolean()
     .refine(val => val === true, 'Você deve aceitar os termos')
 });
