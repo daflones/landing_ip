@@ -523,7 +523,7 @@ const portfolioItems = [
   },
   {
     id: 'gp097',
-    title: '350ml Cilbaba',
+    title: '350ml Cilbala',
     category: 'Bebidas Gaseificadas',
     image: '/images/produtos/GP097.png',
     description: 'Capacidade: 350ml, Bocal: 28mm, Peso: 21g, Cores: Cristal, Fardo: 171 unidades.',
