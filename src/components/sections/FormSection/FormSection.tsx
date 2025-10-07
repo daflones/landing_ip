@@ -107,7 +107,8 @@ const FormSection: React.FC = () => {
       const insertData: any = {
         nome_contato: data.nome,
         profile: '4042931c-0d14-46e8-8809-1a4d3ce99f25',
-        formulario_site: true
+        formulario_site: true,
+        origem: 'Site'
       };
 
       // Only add fields if they have values
